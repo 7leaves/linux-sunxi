@@ -70,6 +70,7 @@
 
 int arch_timer_common_register(void);
 void sw_pdev_init(void);
+void sunxi_pdev_script_init(void);
 
 /*
  * Only reserve certain important memory blocks if there are actually
@@ -448,6 +449,7 @@ struct sys_timer sw_sys_timer = {
 void __init sw_core_init(void)
 {
 	sw_pdev_init();
+	sunxi_pdev_script_init();
 }
 
 MACHINE_START(SUN4I, "sun4i")
